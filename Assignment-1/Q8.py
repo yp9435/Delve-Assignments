@@ -12,3 +12,24 @@ Passwords that match the criteria are to be printed, each separated by a comma.
 """
 
 #Answer
+passwords = input("Enter the passwords:").split(",")
+#passwords = "ABd1234@1,a F1#,2w3E*,2We3345"
+valid = []
+hasalength = False
+for i in passwords:
+    if len(i) >= 6 and len(i) <= 12:
+        hasalength = True
+    hasalower = any(c.islower() for c in i)
+    hasaupper = any(c.isupper() for c in i)
+    hasadigit = any(c.isdigit() for c in i)
+    hasaspecial = any(c in '$#@' for c in i)
+    hasaspace = any(c == ' ' for c in i)
+
+    #print(i," - ",hasalength,hasaupper,hasalower,hasadigit,hasaspecial,hasaspace)
+    if hasadigit and hasalength and hasalower and hasaupper and hasaspecial and (hasaspace == False):
+        valid.append(i)
+
+#print(valid)
+print("Valid passwords:", ','.join(valid))
+
+
