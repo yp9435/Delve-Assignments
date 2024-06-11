@@ -1,11 +1,33 @@
 """Question
-You are required to write a program to sort the (name, age, height) tuples 
-by ascending order where name is string, age and height are numbers. 
-The tuples are input by console. The sort criteria is:
-1: Sort based on name;
-2: Then sort based on age;
-3: Then sort by score.
-The priority is that name > age > score.
+Find the continuous occurrence of the string.
+Expected Input:
+Aabbcdeefffaabbcc
+Expected Output:
+a2b2c1d1e2f3a2b2c2
 """
 
 #Answer
+#string = "Aabbcdeefffaabbcc"
+string = input("Enter a string:").lower()
+
+result = []
+count = 1
+currentch = string[0]
+
+for i in range(1,len(string)):
+    if string[i] == currentch:
+        count+=1
+    else:
+        result.append(currentch+str(count))
+        currentch = string[i]
+        count=1
+result.append(currentch+str(count))
+#print(result)
+print(''.join(result))
+
+
+
+
+    
+
+

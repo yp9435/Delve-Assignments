@@ -1,11 +1,24 @@
 """Question
-You are required to write a program to sort the (name, age, height) tuples 
-by ascending order where name is string, age and height are numbers. 
-The tuples are input by console. The sort criteria is:
-1: Sort based on name;
-2: Then sort based on age;
-3: Then sort by score.
-The priority is that name > age > score.
+Find how many pairs in a binary number that starts and ends with 1
+Expected Input 1:
+100101
+Expected Output:
+2
+Expected Input 2:
+1001101010010
+Expected Output:
+15
 """
 
 #Answer
+binarynum = input("Enter a Binary number:")
+
+posof1=[i for i in range(len(binarynum)) if binarynum[i]=='1']
+count=0
+
+for i in range(len(posof1)): #start
+    for j in range(i+1,len(posof1)): #end
+        count+=1
+
+print(count)
+
