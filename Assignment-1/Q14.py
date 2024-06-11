@@ -17,21 +17,6 @@ Expected Output:
 1-1
 """
 
-"""result = []
-count = 1
-currentch = string[0]
-
-for i in range(1,len(string)):
-    if string[i] == currentch:
-        count+=1
-    else:
-        result.append(currentch+str(count))
-        currentch = string[i]
-        count=1
-result.append(currentch+str(count))
-#print(result)
-print(''.join(result))
-"""
 #Answer
 valid_currency = eval(input("Enter a list of valid currency: "))
 amount= int(input("Money:"))

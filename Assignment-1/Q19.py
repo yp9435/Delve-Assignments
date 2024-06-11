@@ -18,3 +18,15 @@ ppyha
 """
 
 #Answer
+case=int(input("Enter Case 1/Case 2:"))
+string=input("Enter the string:")
+n=int(input('Enter the no of times:'))
+
+if case==1:
+    for i in range(n):
+        string=string[1:]+string[0]
+        print(string)
+if case==2:
+    for i in range(n):
+        string=string[-1]+string[:-1]
+        print(string)

@@ -11,3 +11,15 @@ Expected Output:
 """
 
 #Answer
+string=input("Enter the number:")
+num=len(string)
+
+armstrong = 0
+for i in string:
+    armstrong += int(i) ** num
+
+
+if armstrong == int(string):
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")

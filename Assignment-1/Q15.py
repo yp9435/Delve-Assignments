@@ -14,3 +14,11 @@ Expected Output:
 """
 
 #Answer
+from math import comb
+n, m = map(int, input("Enter total number of stops(n) and number of stops the bus makes(m):").split(","))
+
+if m>n:
+    pass
+else:
+    result=comb(n - m + 1, m)#combination formula
+print("The number of ways in the travel between Town A and Town B so that no stop is consecutive:",result)

@@ -11,3 +11,13 @@ Expected Output :
 """
 
 #Answer
+num=int(input('Enter a decimal number:'))
+if num == 0:
+    print("Result: 0")
+else:
+    binary = ""
+    while num > 0:
+        rem = num % 2  
+        binary = str(rem) + binary  
+        num //= 2 
+    print("Result:",binary)

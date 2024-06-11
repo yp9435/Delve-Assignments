@@ -47,3 +47,21 @@ fat percentage is 57 less than the ideal value
 """
 
 #Answer
+healthy={'Sugar level':15,'Blood pressure':32,'Heartbeat rate':71,'weight':65,'fat percentage':10}
+inputdata={}
+for i in healthy:
+    string="Enter "+i+":"
+    temp=int(input(string))
+    inputdata[i]=temp
+print(inputdata)
+diff={}
+for i in healthy:
+    diff[i]=healthy[i]-inputdata[i]
+    if diff[i]<0:
+        print('The '+i+' is '+str(abs(diff[i]))+' more than the ideal value')
+    elif diff[i]>0:
+        print('The '+i+' is '+str(abs(diff[i]))+' less than the ideal value')
+    else:
+        print('The '+i+' is '+str(abs(diff[i]))+' equal to the ideal value')
+
+
